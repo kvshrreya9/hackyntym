@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Available Donors</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h2 style="text-align:center;color:white;margin-top:20px;">
+Available Donors
+</h2>
+
+{% for donor in donors %}
+
+<div class="card">
+
+<h3>{{ donor["name"] }}</h3>
+
+<p><b>Blood Group:</b> {{ donor["blood"] }}</p>
+
+<p><b>Phone:</b> {{ donor["phone"] }}</p>
+
+<p><b>City:</b> {{ donor["city"] }}</p>
+
+<p><b>Area:</b> {{ donor["area"] }}</p>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>
